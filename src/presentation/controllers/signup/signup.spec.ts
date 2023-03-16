@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/return-await */
 import { SignUpController } from './signup'
 import { MissingParamError, InvalidParamError, ServerError } from '../../errors'
 import { EmailValidator, AddAccount, AddAccountModel, AccountModel } from './signup-protocols'
@@ -29,7 +28,6 @@ const makeAddAccount = (): AddAccount => {
         password: 'valid_password'
       }
 
-      // eslint-disable-next-line @typescript-eslint/return-await
       return new Promise(resolve => resolve(fakeAcccount))
     }
   }
